@@ -61,6 +61,7 @@ static const CGFloat kCYLBadgeDefaultRedDotRadius = 4.f;
 
     if ([value isEqualToString:@""]) {
         [self cyl_showRedDotBadge];
+	 self.cyl_badge.hidden = YES;
         return;
     }
     if ([value isEqualToString:@"new"] || [value isEqualToString:@"NEW"] ) {
