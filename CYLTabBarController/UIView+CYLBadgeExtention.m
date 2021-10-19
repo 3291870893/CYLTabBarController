@@ -46,6 +46,7 @@ static const CGFloat kCYLBadgeDefaultRedDotRadius = 4.f;
 #pragma mark -- private methods
 - (void)cyl_showBadgeWithValue:(NSString *)value {
     if (!value) {
+	self.cyl_badge.hidden = YES;
         return;
     }
     NSCharacterSet *numberSet = [NSCharacterSet decimalDigitCharacterSet];
@@ -61,7 +62,6 @@ static const CGFloat kCYLBadgeDefaultRedDotRadius = 4.f;
 
     if ([value isEqualToString:@""]) {
         [self cyl_showRedDotBadge];
-	 self.cyl_badge.hidden = YES;
         return;
     }
     if ([value isEqualToString:@"new"] || [value isEqualToString:@"NEW"] ) {
